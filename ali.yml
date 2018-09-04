@@ -1,0 +1,10 @@
+---
+  - name: ali test with jenkins
+    hosts: all
+    become_user: root
+    gather_facts: yes
+    tasks:
+      - name: ali first task
+        yum:
+          name: git
+          state: latest
